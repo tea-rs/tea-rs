@@ -1,0 +1,25 @@
+{
+  "protocolVersion": "1.0",
+  "type": "message_committed",
+  "recordId": "0195a0b1-5e65-7762-9938-0aa7aa000043",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "7",
+  "timestamp": "2026-07-23T09:30:14.121Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "message": {
+      "id": "0195a0b1-5e66-7e4d-9af7-0aa7aa000044",
+      "type": "tool_result",
+      "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+      "toolName": "write_text_file",
+      "content": [
+        {
+          "type": "text",
+          "text": "wrote /workspace/notes.txt"
+        }
+      ],
+      "isError": false,
+      "timestamp": "2026-07-23T09:30:14.121Z"
+    }
+  }
+}

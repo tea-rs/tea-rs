@@ -1,0 +1,17 @@
+{
+  "protocolVersion": "1.0",
+  "compatibility": "skippable_observation",
+  "type": "tool_execution_progress",
+  "eventId": "0195a0b1-5e48-7234-8072-0aa7aa000014",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008",
+  "sequence": "5",
+  "timestamp": "2026-07-23T09:30:14.100Z",
+  "payload": {
+    "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+    "message": "writing file",
+    "completedUnits": 1,
+    "totalUnits": 1
+  }
+}

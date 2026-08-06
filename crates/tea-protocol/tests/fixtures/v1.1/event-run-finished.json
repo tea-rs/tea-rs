@@ -1,0 +1,18 @@
+{
+  "protocolVersion": "1.1",
+  "type": "run_finished",
+  "eventId": "0195a0b1-5e49-7ec5-8d81-0aa7aa000015",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "sequence": "6",
+  "timestamp": "2026-07-23T09:30:15.000Z",
+  "futureEnvelopeField": { "introducedIn": "1.1" },
+  "payload": {
+    "status": "completed",
+    "usage": {
+      "inputTokens": 1200,
+      "outputTokens": 340
+    },
+    "futurePayloadField": { "cacheTokens": 30 }
+  }
+}

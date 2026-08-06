@@ -1,0 +1,31 @@
+[package]
+name = "tea-profile"
+version = "0.1.0"
+description = "Versioned product profile schema, validation, and composition for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "profile"]
+categories = ["config"]
+
+[dependencies]
+tea-policy = { version = "=0.1.0", path = "../tea-policy" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools", default-features = false }
+semver.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

@@ -1,0 +1,10 @@
+{
+  "protocolVersion": "1.0",
+  "type": "steer",
+  "commandId": "0195a0b1-5e5b-739d-bf5c-0aa7aa000033",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:30:12.500Z",
+  "payload": {
+    "text": "Focus on the protocol crate."
+  }
+}

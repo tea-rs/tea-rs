@@ -1,0 +1,1550 @@
+# Tea TUI output gallery
+# Codex reference: 1836ae0612052137d0cabaff7807ff8314cee940
+
+## profile default 40x16 theme-generation=7
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                        \n› Refactor the renderer and preserve CJK\n   宽度.                                \n                                        \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal\n  width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE] || DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval\n  └ write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed\n  ├ cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破\n  坏宽度\n  └ a-very-long-unbroken-token-012345678\n    9-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wi...\n    line 2 wide-output-wide-output-wi...\n    line 3 wide-output-wide-output-wi...\n    line 4 wide-output-wide-output-wi...\n    line 5 wide-output-wide-output-wi...\n    ... +4 lines\n    line 10 wide-output-wide-output-w...\n    line 11 wide-output-wide-output-w...\n    line 12 wide-output-wide-output-w...\n    line 13 wide-output-wide-output-w...\n    line 14 wide-output-wide-output-w...|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for\n  └ ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled\n    .|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context lim\n  it|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering\n  └ also update the narrow-terminal test\n    s|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task\n  └ agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+## profile no-color 40x16 theme-generation=1
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                        \n› Refactor the renderer and preserve CJK\n   宽度.                                \n                                        \n|
+styles |-/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE] || -/-/NONE/NONE || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal\n  width constraints.|
+styles |-/-/DIM | ITALIC/NONE spans=[-/-/DIM | ITALIC/NONE, -/-/DIM | ITALIC/NONE] || -/-/DIM | ITALIC/NONE spans=[-/-/DIM | ITALIC/NONE, -/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval\n  └ write_text_file /workspace/notes.txt|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed\n  ├ cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破\n  坏宽度\n  └ a-very-long-unbroken-token-012345678\n    9-abcdefghijklmnopqrstuvwxyz|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wi...\n    line 2 wide-output-wide-output-wi...\n    line 3 wide-output-wide-output-wi...\n    line 4 wide-output-wide-output-wi...\n    line 5 wide-output-wide-output-wi...\n    ... +4 lines\n    line 10 wide-output-wide-output-w...\n    line 11 wide-output-wide-output-w...\n    line 12 wide-output-wide-output-w...\n    line 13 wide-output-wide-output-w...\n    line 14 wide-output-wide-output-w...|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for\n  └ ratatui styled wrapping|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled\n    .|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM | CROSSED_OUT/NONE spans=[-/-/BOLD | DIM/NONE, -/-/DIM | CROSSED_OUT/NONE] || -/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |-/-/BOLD | REVERSED/NONE spans=[-/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context lim\n  it|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |-/-/NONE/NONE spans=[-/-/NONE/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering\n  └ also update the narrow-terminal test\n    s|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task\n  └ agent/review renderer audit|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+## profile reduced-motion 40x16 theme-generation=8
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                        \n› Refactor the renderer and preserve CJK\n   宽度.                                \n                                        \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal\n  width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE] || DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |* Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval\n  └ write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |* Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed\n  ├ cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破\n  坏宽度\n  └ a-very-long-unbroken-token-012345678\n    9-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wi...\n    line 2 wide-output-wide-output-wi...\n    line 3 wide-output-wide-output-wi...\n    line 4 wide-output-wide-output-wi...\n    line 5 wide-output-wide-output-wi...\n    ... +4 lines\n    line 10 wide-output-wide-output-w...\n    line 11 wide-output-wide-output-w...\n    line 12 wide-output-wide-output-w...\n    line 13 wide-output-wide-output-w...\n    line 14 wide-output-wide-output-w...|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |* Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for\n  └ ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled\n    .|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context lim\n  it|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering\n  └ also update the narrow-terminal test\n    s|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task\n  └ agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+## profile default 80x24 theme-generation=7
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                \n› Refactor the renderer and preserve CJK 宽度.                                  \n                                                                                \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+## profile no-color 80x24 theme-generation=1
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                \n› Refactor the renderer and preserve CJK 宽度.                                  \n                                                                                \n|
+styles |-/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE] || -/-/NONE/NONE || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |-/-/DIM | ITALIC/NONE spans=[-/-/DIM | ITALIC/NONE, -/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM | CROSSED_OUT/NONE spans=[-/-/BOLD | DIM/NONE, -/-/DIM | CROSSED_OUT/NONE] || -/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |-/-/BOLD | REVERSED/NONE spans=[-/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |-/-/NONE/NONE spans=[-/-/NONE/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+## profile reduced-motion 80x24 theme-generation=8
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                \n› Refactor the renderer and preserve CJK 宽度.                                  \n                                                                                \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |* Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |* Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |* Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+## profile default 120x32 theme-generation=7
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                                                        \n› Refactor the renderer and preserve CJK 宽度.                                                                          \n                                                                                                                        \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+## profile no-color 120x32 theme-generation=1
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                                                        \n› Refactor the renderer and preserve CJK 宽度.                                                                          \n                                                                                                                        \n|
+styles |-/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/REVERSED/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE] || -/-/NONE/NONE || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/BOLD/NONE, -/-/NONE/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |-/-/DIM | ITALIC/NONE spans=[-/-/DIM | ITALIC/NONE, -/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |x Working renderer migration\n  └ elapsed 12s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |x Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |x Waited cargo test\n  └ stdin waiting for process output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/BOLD/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/BOLD/NONE, -/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM | CROSSED_OUT/NONE spans=[-/-/BOLD | DIM/NONE, -/-/DIM | CROSSED_OUT/NONE] || -/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |-/-/BOLD | REVERSED/NONE spans=[-/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/BOLD | REVERSED/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |-/-/NONE/NONE spans=[-/-/NONE/NONE, -/-/NONE/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |-/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE, -/-/BOLD | DIM/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/DIM/NONE spans=[-/-/DIM/NONE, -/-/DIM/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE] || -/-/NONE/NONE spans=[-/-/DIM/NONE, -/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |-/-/BOLD/NONE spans=[-/-/BOLD/NONE, -/-/BOLD/NONE, -/-/BOLD/NONE, -/-/DIM/NONE, -/-/DIM/NONE]|
+
+## profile reduced-motion 120x32 theme-generation=8
+
+### user-prompt [supported]
+raw |Refactor the renderer and preserve CJK 宽度.|
+display |                                                                                                                        \n› Refactor the renderer and preserve CJK 宽度.                                                                          \n                                                                                                                        \n|
+styles |White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || White/Rgb(36, 40, 45)/NONE/NONE || -/-/NONE/NONE|
+
+### assistant-response [supported]
+raw |## Result\n\n- Added typed cells\n- Preserved **Markdown** output|
+display |## Result\n\n- Added typed cells\n- Preserved Markdown output\n|
+styles |White/-/BOLD/NONE spans=[White/-/BOLD/NONE] || White/-/NONE/NONE || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[LightBlue/-/NONE/NONE, White/-/NONE/NONE, White/-/BOLD/NONE, White/-/NONE/NONE] || -/-/NONE/NONE|
+
+### thinking-reasoning [supported-observable-events-only]
+raw |Checking the projection and terminal width constraints.|
+display |• Checking the projection and terminal width constraints.|
+styles |DarkGray/-/DIM | ITALIC/NONE spans=[DarkGray/-/DIM | ITALIC/NONE, DarkGray/-/DIM | ITALIC/NONE]|
+
+### run-activity [supported]
+raw |Working renderer migration\nelapsed 12s|
+display |* Working renderer migration\n  └ elapsed 12s|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### generic-tool-call [supported]
+raw |Requested custom_tool workspace/index|
+display |○ Requested custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-proposed [supported]
+raw |Proposed custom_tool workspace/index|
+display |○ Proposed custom_tool workspace/index|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-approval-pending [supported]
+raw |Waiting for approval write_text_file /workspace/notes.txt|
+display |? Waiting for approval write_text_file /workspace/notes.txt|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### tool-arguments-progress-result [supported-generic-fallback]
+raw |Running custom_tool workspace/index\narguments {"path":"src","depth":3}\nprogress 24/80 files indexed|
+display |* Running custom_tool workspace/index\n  ├ arguments {"path":"src","depth":3}\n  └ progress 24/80 files indexed|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-failed [supported]
+raw |Failed cargo test -p tea-cli --test tui\nexit 101 after 1.42s|
+display |■ Failed cargo test -p tea-cli --test tui\n  └ exit 101 after 1.42s|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### lifecycle-interrupted [supported]
+raw |Interrupted cargo test\nreason cancelled by user|
+display |■ Interrupted cargo test\n  └ reason cancelled by user|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE, LightRed/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-uncertain [supported]
+raw |Interrupted remote deploy\noutcome unknown after disconnect|
+display |? Interrupted remote deploy\n  └ outcome unknown after disconnect|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### lifecycle-queued [supported]
+raw |Queued follow-up validation|
+display |○ Queued follow-up validation|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### empty-tool-result [supported]
+raw ||
+display |• Returned custom_tool\n  └ (no output)|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### malformed-tool-detail [supported-generic-fallback]
+raw |Ran custom_tool\narguments {"path":␛[31m|
+display |• Ran custom_tool\n  └ arguments {"path":␛[31m|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hostile-cjk-emoji [supported]
+raw |控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\na-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+display |! 控制字符 ␛[31m 保持可见，emoji 👩🏽‍💻 不破坏宽度\n  └ a-very-long-unbroken-token-0123456789-abcdefghijklmnopqrstuvwxyz|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### long-process-output [supported-bounded-preview]
+raw |line 1 wide-output-wide-output-wide-output-wide-output-\nline 2 wide-output-wide-output-wide-output-wide-output-\nline 3 wide-output-wide-output-wide-output-wide-output-\nline 4 wide-output-wide-output-wide-output-wide-output-\nline 5 wide-output-wide-output-wide-output-wide-output-\nline 6 wide-output-wide-output-wide-output-wide-output-\nline 7 wide-output-wide-output-wide-output-wide-output-\nline 8 wide-output-wide-output-wide-output-wide-output-\nline 9 wide-output-wide-output-wide-output-wide-output-\nline 10 wide-output-wide-output-wide-output-wide-output-\nline 11 wide-output-wide-output-wide-output-wide-output-\nline 12 wide-output-wide-output-wide-output-wide-output-\nline 13 wide-output-wide-output-wide-output-wide-output-\nline 14 wide-output-wide-output-wide-output-wide-output-|
+display |• Returned long-running-command\n  └ line 1 wide-output-wide-output-wide-output-wide-output-\n    line 2 wide-output-wide-output-wide-output-wide-output-\n    line 3 wide-output-wide-output-wide-output-wide-output-\n    line 4 wide-output-wide-output-wide-output-wide-output-\n    line 5 wide-output-wide-output-wide-output-wide-output-\n    ... +4 lines\n    line 10 wide-output-wide-output-wide-output-wide-output-\n    line 11 wide-output-wide-output-wide-output-wide-output-\n    line 12 wide-output-wide-output-wide-output-wide-output-\n    line 13 wide-output-wide-output-wide-output-wide-output-\n    line 14 wide-output-wide-output-wide-output-wide-output-|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### shell-command [target-generic-until-command-metadata]
+raw |Ran cargo test -p tea-cli --test tui\n39 passed; 0 failed\nexit 0 in 1.42s|
+display |• Ran cargo test -p tea-cli --test tui\n  ├ 39 passed; 0 failed\n  └ exit 0 in 1.42s|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### background-terminal [protocol-gated]
+raw |Waited cargo test\nstdin waiting for process output|
+display |* Waited cargo test\n  └ stdin waiting for process output|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### file-search-list [protocol-gated-generic-fallback]
+raw |Read crates/tea-cli/src/tui\npresentation.rs, render.rs, theme.rs|
+display |• Read crates/tea-cli/src/tui\n  └ presentation.rs, render.rs, theme.rs|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### web-search [protocol-gated-generic-fallback]
+raw |Searched the web for ratatui styled wrapping|
+display |• Searched the web for ratatui styled wrapping|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### mcp-lifecycle [target-generic-until-mcp-call-events]
+raw |Called docs.search query=ratatui\nFound styling guidance in styles.md|
+display |• Called docs.search query=ratatui\n  └ Found styling guidance in styles.md|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### fenced-code [supported-semantic-style]
+raw |```rust\nfn render() -> bool { true }\n```|
+display |fn render() -> bool { true }\n|
+styles |Gray/-/NONE/NONE spans=[Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(143, 161, 179)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(180, 142, 173)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE, Rgb(208, 135, 112)/-/NONE/NONE, Rgb(192, 197, 206)/-/NONE/NONE] || -/-/NONE/NONE|
+
+### process-code-output [supported-generic-fallback]
+raw |stdout: 39 passed\nstderr: warning: retrying|
+display |• Returned cargo test\n  └ 39 passed\n    warning: retrying|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE] || LightRed/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightRed/-/NONE/NONE]|
+
+### plan-proposal [renderer-ready-protocol-gated]
+raw |## Renderer migration\n\n1. Introduce typed cells\n2. Port output grammar\n3. Run PTY tests|
+display |○ Proposed Plan\n  └ ## Renderer migration\n    \n    1. Introduce typed cells\n    2. Port output grammar\n    3. Run PTY tests|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE, Yellow/-/BOLD/NONE] || White/-/BOLD/NONE spans=[DarkGray/-/NONE/NONE, White/-/BOLD/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE] || White/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, LightBlue/-/NONE/NONE, White/-/NONE/NONE]|
+
+### plan-progress [renderer-ready-protocol-gated]
+raw |Updated Plan\n[x] Freeze gallery\n[>] Port tool cells\n[ ] Run PTY tests\nProtocol projection remains disabled.|
+display |• Updated Plan\n  [x] Freeze gallery\n  [>] Port tool cells\n  [ ] Run PTY tests\n  └ Protocol projection remains disabled.|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE] || DarkGray/-/DIM | CROSSED_OUT/NONE spans=[DarkGray/-/BOLD/NONE, DarkGray/-/DIM | CROSSED_OUT/NONE] || Yellow/-/BOLD/NONE spans=[Yellow/-/BOLD/NONE, Yellow/-/BOLD/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### patch-diff [protocol-gated-generic-fallback]
+raw |- label: text\n+ • Ran tool\n+   └ output|
+display |• Updated src/render.rs\n  └ - label: text\n    + • Ran tool\n    +   └ output|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### approval [supported-modal-and-durable-fallback]
+raw |Approval required write_text_file\ntarget native\neffects fs.write|
+display |? Approval required write_text_file\n  ├ target native\n  └ effects fs.write|
+styles |Black/Yellow/BOLD/NONE spans=[Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, Black/Yellow/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### error [supported]
+raw |Tool execution failed\npermission denied|
+display |■ Tool execution failed\n  └ permission denied|
+styles |LightRed/-/NONE/NONE spans=[LightRed/-/NONE/NONE, LightRed/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### warning [supported-typed-callers]
+raw |Session is approaching its context limit|
+display |! Session is approaching its context limit|
+styles |Yellow/-/NONE/NONE spans=[Yellow/-/NONE/NONE, Yellow/-/NONE/NONE]|
+
+### information [supported]
+raw |Connection restored\nsession state reloaded|
+display |• Connection restored\n  └ session state reloaded|
+styles |Reset/-/NONE/NONE spans=[Reset/-/NONE/NONE, Reset/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### queued-steering-follow-up [supported]
+raw |also update the narrow-terminal tests|
+display |○ Queued steering also update the narrow-terminal tests|
+styles |DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE, DarkGray/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### image-artifact [protocol-gated-textual-fallback]
+raw |image/png, 1280x720|
+display |• Produced screenshot.png\n  └ image/png, 1280x720|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || DarkGray/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|
+
+### hook [protocol-gated-generic-fallback]
+raw |Ran hook post-format\ncargo fmt --check|
+display |• Ran hook post-format\n  └ cargo fmt --check|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE] || Reset/-/NONE/NONE spans=[DarkGray/-/NONE/NONE, Reset/-/NONE/NONE]|
+
+### multi-agent [runtime-gated-generic-fallback]
+raw |Completed task agent/review renderer audit|
+display |• Completed task agent/review renderer audit|
+styles |Green/-/NONE/NONE spans=[Green/-/NONE/NONE, Green/-/NONE/NONE, Green/-/BOLD/NONE, DarkGray/-/NONE/NONE, DarkGray/-/NONE/NONE]|

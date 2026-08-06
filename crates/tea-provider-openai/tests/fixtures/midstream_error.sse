@@ -1,0 +1,6 @@
+data: {"id":"chatcmpl-4","object":"chat.completion.chunk","created":1,"model":"gpt-4o-mini","choices":[{"index":0,"delta":{"role":"assistant","content":"partial"},"finish_reason":null}]}
+
+data: {"error":{"message":"overloaded","type":"server_error","code":"overloaded"}}
+
+data: [DONE]
+

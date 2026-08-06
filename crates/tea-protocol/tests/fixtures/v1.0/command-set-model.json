@@ -1,0 +1,13 @@
+{
+  "protocolVersion": "1.0",
+  "type": "set_model",
+  "commandId": "0195a0b1-5e5f-77be-bdef-0aa7aa000037",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:30:15.300Z",
+  "payload": {
+    "model": {
+      "providerId": "anthropic",
+      "modelId": "anthropic/claude-sonnet"
+    }
+  }
+}

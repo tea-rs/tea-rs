@@ -1,0 +1,11 @@
+{
+  "protocolVersion": "1.0",
+  "type": "session_created",
+  "recordId": "0195a0b1-5e50-7af4-8972-0aa7aa000022",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "0",
+  "timestamp": "2026-07-23T09:30:12.120Z",
+  "payload": {
+    "profileId": "minimal-assistant"
+  }
+}

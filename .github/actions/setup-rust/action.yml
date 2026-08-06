@@ -1,0 +1,47 @@
+name: Setup Rust
+description: Install the pinned Rust toolchain and restore non-secret Cargo caches.
+
+inputs:
+  cache-cargo-home:
+    description: Restore and save Cargo registry and git caches.
+    required: false
+    default: "true"
+  cache-target:
+    description: Restore and save the job-specific Cargo target directory.
+    required: false
+    default: "true"
+
+runs:
+  using: composite
+  steps:
+    - name: Restore Cargo registry and git caches
+      if: ${{ inputs.cache-cargo-home == 'true' }}
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+        key: cargo-home-1.97.1-${{ runner.os }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}
+        restore-keys: |
+          cargo-home-1.97.1-${{ runner.os }}-
+
+    - name: Restore job-specific Cargo target cache
+      if: ${{ inputs.cache-target == 'true' }}
+      uses: actions/cache@v4
+      with:
+        path: target/
+        key: rust-target-1.97.1-${{ runner.os }}-${{ github.job }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ github.sha }}
+        restore-keys: |
+          rust-target-1.97.1-${{ runner.os }}-${{ github.job }}-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+          rust-target-1.97.1-${{ runner.os }}-${{ github.job }}-
+
+    - name: Install Rust 1.97.1
+      shell: bash
+      run: rustup toolchain install 1.97.1 --profile minimal --component clippy,rustfmt
+
+    - name: Report Rust toolchain
+      shell: bash
+      run: |
+        rustc --version
+        cargo --version

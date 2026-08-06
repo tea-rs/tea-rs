@@ -1,0 +1,13 @@
+{
+  "protocolVersion": "1.0",
+  "type": "session_forked",
+  "eventId": "0195a0b1-5e4d-7f04-8a35-0aa7aa000019",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "9",
+  "timestamp": "2026-07-23T09:32:00.000Z",
+  "payload": {
+    "sourceBranchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+    "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+    "fromMessageId": "0195a0b1-5e43-7a1c-98d2-0aa7aa000009"
+  }
+}

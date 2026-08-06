@@ -1,0 +1,16 @@
+{
+  "protocolVersion": "1.0",
+  "compatibility": "skippable_observation",
+  "type": "message_delta",
+  "eventId": "0195a0b1-5e41-7e75-bdc7-0aa7aa000007",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008",
+  "sequence": "2",
+  "timestamp": "2026-07-23T09:30:12.300Z",
+  "payload": {
+    "messageId": "0195a0b1-5e43-7a1c-98d2-0aa7aa000009",
+    "contentIndex": 0,
+    "delta": { "type": "text_delta", "text": "I will inspect" }
+  }
+}

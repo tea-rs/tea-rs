@@ -1,0 +1,14 @@
+{
+  "protocolVersion": "1.0",
+  "type": "branch_created",
+  "recordId": "0195a0b1-5e58-778a-a74e-0aa7aa000030",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "8",
+  "timestamp": "2026-07-23T09:32:00.000Z",
+  "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+  "payload": {
+    "sourceBranchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+    "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+    "fromRecordId": "0195a0b1-5e4a-742a-b57f-0aa7aa000016"
+  }
+}

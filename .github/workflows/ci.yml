@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+  CARGO_DENY_VERSION: 0.20.2
+
+jobs:
+  metadata:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+        with:
+          cache-cargo-home: "false"
+          cache-target: "false"
+      - run: ./scripts/ci-check.sh metadata
+
+  rust-format:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+        with:
+          cache-cargo-home: "false"
+          cache-target: "false"
+      - run: ./scripts/tests/ci-check.sh
+      - run: ./scripts/tests/integration-layout.sh
+      - run: ./scripts/ci-check.sh format
+
+  rust-clippy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: ./scripts/ci-check.sh clippy
+
+  rust-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: ./scripts/ci-check.sh test
+
+  rust-docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: ./scripts/ci-check.sh docs
+
+  rust-quality:
+    needs: [rust-format, rust-clippy, rust-tests, rust-docs]
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Parallel Rust quality gates passed."
+
+  mcp-windows-cross-check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: rustup target add x86_64-pc-windows-gnu --toolchain 1.97.1
+      - run: cargo clippy -p tea-mcp --all-targets --all-features --target x86_64-pc-windows-gnu -- -D warnings
+
+  dependency-policy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+        with:
+          cache-target: "false"
+      - run: cargo +1.97.1 install cargo-deny --locked --version "$CARGO_DENY_VERSION"
+      - run: ./scripts/ci-check.sh dependencies
+
+  package-cli-linux:
+    needs: [metadata, rust-quality, mcp-windows-cross-check, dependency-policy]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: |
+          test "$(rustc -vV | sed -n 's/^host: //p')" = "x86_64-unknown-linux-gnu"
+      - run: TEA_PACKAGE_TARGET=x86_64-unknown-linux-gnu ./scripts/package-cli.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tea-cli-linux-bundles
+          path: |
+            target/dist/*.tar.gz
+            target/dist/*.sha256
+          retention-days: 7

@@ -1,0 +1,13 @@
+{
+  "protocolVersion": "1.0",
+  "type": "policy_decision_recorded",
+  "recordId": "0195a0b1-5e53-7771-82ab-0aa7aa000025",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "4",
+  "timestamp": "2026-07-23T09:30:13.005Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+    "decision": "require_approval"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "protocolVersion": "1.0",
+  "type": "fork_session",
+  "commandId": "0195a0b1-5e62-7344-87ef-0aa7aa000040",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:36:00.000Z",
+  "payload": {
+    "fromMessageId": "0195a0b1-5e43-7a1c-98d2-0aa7aa000009",
+    "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021"
+  }
+}

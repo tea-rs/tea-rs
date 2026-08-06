@@ -1,0 +1,32 @@
+{
+  "protocolVersion": "1.0",
+  "type": "message_committed",
+  "recordId": "0195a0b1-5e63-7b8c-a5ad-0aa7aa000041",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "2",
+  "timestamp": "2026-07-23T09:30:13.000Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "message": {
+      "id": "0195a0b1-5e64-76d6-9a5a-0aa7aa000042",
+      "type": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I will write the inspection notes."
+        },
+        {
+          "type": "tool_call",
+          "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+          "toolName": "write_text_file",
+          "arguments": {
+            "path": "/workspace/notes.txt",
+            "content": "inspection complete"
+          }
+        }
+      ],
+      "stopReason": "tool_use",
+      "timestamp": "2026-07-23T09:30:13.000Z"
+    }
+  }
+}

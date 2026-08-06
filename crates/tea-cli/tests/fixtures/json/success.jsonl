@@ -1,0 +1,6 @@
+{"modeVersion":"1.0","protocolVersion":"1.0","type":"tea_event_stream","workspacePrefix":true}
+{"type":"run_started"}
+{"deltaType":"thinking_delta","text":"plan next","type":"message_delta"}
+{"deltaType":"text_delta","text":"answer","type":"message_delta"}
+{"type":"turn_checkpointed"}
+{"type":"run_finished"}

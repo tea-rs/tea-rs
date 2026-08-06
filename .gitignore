@@ -1,0 +1,37 @@
+# Rust build artifacts and fuzzing output.
+/target/
+/fuzz/target/
+/fuzz/artifacts/
+/fuzz/coverage/
+
+# Local Cargo state and registry credentials.
+/.cargo/bin/
+/.cargo/git/
+/.cargo/registry/
+/.cargo/.crates.toml
+/.cargo/.crates2.json
+
+# Environment files and local application credentials.
+/.env
+/.env.*
+!/.env.example
+/.tea/providers.json
+
+# Editors, IDEs, and swap files.
+/.idea/
+/.vscode/
+/.zed/
+*.swp
+*.swo
+
+# Operating-system metadata and local logs.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+
+# Local tooling state and generated traces.
+/.codegraph/
+/.codebase-memory/
+/.traces/
+/.yunxin-devflow/

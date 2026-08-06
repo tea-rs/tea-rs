@@ -1,0 +1,33 @@
+[package]
+name = "tea-policy"
+version = "0.1.0"
+description = "Pure policy and approval contracts for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "policy", "approval"]
+categories = ["data-structures"]
+
+[dependencies]
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools", default-features = false }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
+
+[dev-dependencies]
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools", features = ["execution"] }
+futures-util.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

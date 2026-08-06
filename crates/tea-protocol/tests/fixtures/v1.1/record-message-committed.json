@@ -1,0 +1,21 @@
+{
+  "protocolVersion": "1.1",
+  "type": "message_committed",
+  "recordId": "0195a0b1-5e4a-742a-b57f-0aa7aa000016",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "1",
+  "timestamp": "2026-07-23T09:30:12.124Z",
+  "causationId": "0195a0b1-5e3c-70a1-927f-0aa7aa000002",
+  "futureEnvelopeField": { "introducedIn": "1.1" },
+  "payload": {
+    "message": {
+      "id": "0195a0b1-5e3d-7bb4-863a-0aa7aa000003",
+      "type": "user",
+      "content": [
+        { "type": "text", "text": "Inspect the workspace." }
+      ],
+      "timestamp": "2026-07-23T09:30:12.124Z"
+    },
+    "futurePayloadField": "compatible additive field"
+  }
+}

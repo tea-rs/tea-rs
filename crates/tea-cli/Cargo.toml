@@ -1,0 +1,88 @@
+[package]
+name = "tea-cli"
+version = "0.1.0"
+description = "Interactive and headless Coding CLI for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "coding", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+default-run = "tea"
+autobins = false
+
+[features]
+default = []
+fixture-server = []
+
+[lib]
+name = "tea_cli"
+path = "src/lib.rs"
+doctest = false
+
+[[bin]]
+name = "tea"
+path = "src/main.rs"
+doc = false
+
+[[bin]]
+name = "tea-cli-mcp-fixture-server"
+path = "src/bin/tea_mcp_fixture_server.rs"
+required-features = ["fixture-server"]
+test = false
+
+[[test]]
+name = "mcp_integration"
+path = "tests/mcp_integration.rs"
+required-features = ["fixture-server"]
+
+[dependencies]
+tea = { package = "tea-rs", version = "=0.1.0", path = "../tea" }
+tea-coding = { version = "=0.1.0", path = "../tea-coding" }
+tea-coding-tools = { version = "=0.1.0", path = "../tea-coding-tools" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-mcp = { version = "=0.1.0", path = "../tea-mcp" }
+tea-policy = { version = "=0.1.0", path = "../tea-policy" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-provider-anthropic = { version = "=0.1.0", path = "../tea-provider-anthropic" }
+tea-provider-http = { version = "=0.1.0", path = "../tea-provider-http" }
+tea-provider-openai = { version = "=0.1.0", path = "../tea-provider-openai" }
+tea-session = { version = "=0.1.0", path = "../tea-session" }
+tea-session-sqlite = { version = "=0.1.0", path = "../tea-session-sqlite" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools" }
+base64.workspace = true
+clap.workspace = true
+chrono.workspace = true
+crossterm.workspace = true
+futures-util.workspace = true
+os_info.workspace = true
+pulldown-cmark.workspace = true
+ratatui.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+syntect.workspace = true
+thiserror.workspace = true
+textwrap.workspace = true
+tokio = { workspace = true, features = ["io-std", "io-util", "signal", "sync", "time"] }
+unicode-segmentation.workspace = true
+unicode-width.workspace = true
+url.workspace = true
+uuid.workspace = true
+
+[dev-dependencies]
+portable-pty.workspace = true
+tea-testkit = { version = "=0.1.0", path = "../tea-testkit" }
+vt100.workspace = true
+
+[target.'cfg(unix)'.dev-dependencies]
+nix.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

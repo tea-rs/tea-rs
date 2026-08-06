@@ -1,0 +1,12 @@
+{
+  "protocolVersion": "1.0",
+  "type": "session_compacted",
+  "eventId": "0195a0b1-5e4b-7c21-92bf-0aa7aa000017",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "8",
+  "timestamp": "2026-07-23T09:31:00.000Z",
+  "payload": {
+    "summaryMessageId": "0195a0b1-5e4c-77da-aab2-0aa7aa000018",
+    "compactedThroughMessageId": "0195a0b1-5e43-7a1c-98d2-0aa7aa000009"
+  }
+}

@@ -1,0 +1,29 @@
+name: Scheduled Fuzzing
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fuzz-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_FUZZ_VERSION: 0.13.2
+
+jobs:
+  fuzz:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: cargo +1.97.1 install cargo-fuzz --locked --version "$CARGO_FUZZ_VERSION"
+      - run: cargo fuzz run protocol_decode -- -max_len=1048576 -timeout=10 -max_total_time=900
+      - run: cargo fuzz run session_replay -- -max_len=1048576 -timeout=10 -max_total_time=900
+      - run: cargo fuzz run tool_arguments -- -max_len=1048576 -timeout=10 -max_total_time=900

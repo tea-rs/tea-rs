@@ -1,0 +1,20 @@
+{
+  "protocolVersion": "1.0",
+  "type": "follow_up",
+  "commandId": "0195a0b1-5e5c-7e10-8bf3-0aa7aa000034",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:30:15.100Z",
+  "payload": {
+    "message": {
+      "id": "0195a0b1-5e5d-747d-9ae2-0aa7aa000035",
+      "type": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Also verify the fixtures."
+        }
+      ],
+      "timestamp": "2026-07-23T09:30:15.100Z"
+    }
+  }
+}

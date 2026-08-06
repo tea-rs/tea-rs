@@ -1,0 +1,43 @@
+[package]
+name = "tea-provider-anthropic"
+version = "0.1.0"
+description = "Anthropic Messages streaming provider adapter for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "anthropic", "provider"]
+categories = ["api-bindings", "asynchronous"]
+
+[lib]
+doctest = false
+
+[dependencies]
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-provider-http = { version = "=0.1.0", path = "../tea-provider-http" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+async-stream = { workspace = true }
+futures-util = { workspace = true }
+reqwest = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt"] }
+
+[dev-dependencies]
+tea-testkit = { version = "=0.1.0", path = "../tea-testkit" }
+tokio = { workspace = true, features = ["io-util", "macros", "net", "rt-multi-thread"] }
+
+[features]
+default = []
+live = []
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

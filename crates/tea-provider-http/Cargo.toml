@@ -1,0 +1,27 @@
+[package]
+name = "tea-provider-http"
+version = "0.1.0"
+description = "Shared HTTP client policy for tea-rs model providers"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+readme = "README.md"
+keywords = ["agent", "http", "provider"]
+categories = ["api-bindings", "asynchronous"]
+
+[lib]
+doctest = false
+
+[dependencies]
+chrono = { workspace = true }
+futures-util = { workspace = true }
+reqwest = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["io-util", "macros", "net", "rt-multi-thread"] }
+
+[lints]
+workspace = true

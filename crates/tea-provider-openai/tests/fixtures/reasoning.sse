@@ -1,0 +1,9 @@
+data: {"id":"chatcmpl-3","object":"chat.completion.chunk","created":1,"model":"o4-mini","choices":[{"index":0,"delta":{"role":"assistant","reasoning":"Let me think.","content":null},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-3","object":"chat.completion.chunk","created":1,"model":"o4-mini","choices":[{"index":0,"delta":{"content":"Answer."},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-3","object":"chat.completion.chunk","created":1,"model":"o4-mini","choices":[{"index":0,"delta":{},"finish_reason":"stop"}]}
+
+data: {"id":"chatcmpl-3","object":"chat.completion.chunk","created":1,"model":"o4-mini","choices":[],"usage":{"prompt_tokens":5,"completion_tokens":4,"total_tokens":9,"prompt_tokens_details":{"cached_tokens":3,"cache_write_tokens":1},"completion_tokens_details":{"reasoning_tokens":2}}}
+
+data: [DONE]

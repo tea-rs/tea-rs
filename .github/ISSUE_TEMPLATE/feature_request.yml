@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest an improvement to Tea.
+title: "feature: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please avoid including credentials, private source, customer data, or
+        security-sensitive details in this form.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the behavior you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: What alternatives have you considered?
+    validations:
+      required: false

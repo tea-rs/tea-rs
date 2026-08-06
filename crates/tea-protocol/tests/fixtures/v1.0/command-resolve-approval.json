@@ -1,0 +1,11 @@
+{
+  "protocolVersion": "1.0",
+  "type": "resolve_approval",
+  "commandId": "0195a0b1-5e3e-77c8-aedd-0aa7aa000004",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:30:14.000Z",
+  "payload": {
+    "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+    "decision": { "type": "allow_once" }
+  }
+}

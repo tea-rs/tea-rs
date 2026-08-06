@@ -1,0 +1,11 @@
+{
+  "protocolVersion": "1.0",
+  "type": "turn_checkpointed",
+  "eventId": "0195a0b1-5e4a-79d0-8843-0aa7aa000016",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008",
+  "sequence": "7",
+  "timestamp": "2026-07-23T09:30:15.100Z",
+  "payload": {}
+}

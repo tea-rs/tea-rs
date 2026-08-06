@@ -1,0 +1,16 @@
+{
+  "protocolVersion": "1.0",
+  "type": "tool_execution_finished",
+  "recordId": "0195a0b1-5e4d-7f55-bc85-0aa7aa000019",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "6",
+  "timestamp": "2026-07-23T09:30:14.120Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+    "isError": false,
+    "content": [
+      { "type": "text", "text": "wrote /workspace/notes.txt" }
+    ]
+  }
+}

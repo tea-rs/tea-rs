@@ -1,0 +1,33 @@
+[package]
+name = "tea-session-sqlite"
+version = "0.1.0"
+description = "Durable SQLite session store for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "session", "sqlite"]
+categories = ["database"]
+
+[dependencies]
+tea-policy = { version = "=0.1.0", path = "../tea-policy" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-session = { version = "=0.1.0", path = "../tea-session" }
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["sync"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt", "time"] }
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

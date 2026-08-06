@@ -1,0 +1,7 @@
+[term]
+color = "auto"
+
+[net]
+retry = 2
+
+git-fetch-with-cli = true

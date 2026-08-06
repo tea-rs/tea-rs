@@ -1,0 +1,47 @@
+[package]
+name = "tea-tools"
+version = "0.1.0"
+description = "Portable tool specifications and execution contracts for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "tools", "json-schema"]
+categories = ["asynchronous", "data-structures"]
+
+[features]
+default = ["execution", "model-projection"]
+execution = [
+  "schema",
+  "dep:tea-control",
+  "dep:futures-core",
+  "dep:futures-util",
+]
+model-projection = ["dep:tea-model"]
+schema = ["dep:idna", "dep:jsonschema"]
+
+[dependencies]
+tea-control = { version = "=0.1.0", path = "../tea-control", optional = true }
+tea-model = { version = "=0.1.0", path = "../tea-model", optional = true }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+futures-core = { workspace = true, optional = true }
+futures-util = { workspace = true, optional = true }
+idna = { workspace = true, optional = true }
+jsonschema = { workspace = true, optional = true }
+semver.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

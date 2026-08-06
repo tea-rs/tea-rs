@@ -1,0 +1,12 @@
+{
+  "protocolVersion": "1.0",
+  "type": "active_branch_changed",
+  "recordId": "0195a0b1-5e59-7854-a36d-0aa7aa000031",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "9",
+  "timestamp": "2026-07-23T09:32:00.001Z",
+  "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+  "payload": {
+    "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021"
+  }
+}

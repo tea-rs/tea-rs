@@ -1,0 +1,3 @@
+{"rpcVersion":"1.0","id":"state-1","type":"query_state","payload":{}}
+{"rpcVersion":"1.0","id":"prompt-1","type":"prompt","payload":{"text":"line separator stays inside JSON"}}
+{"rpcVersion":"1.0","id":"snapshot-1","type":"query_snapshot","payload":{"afterSequence":"0","limit":16}}

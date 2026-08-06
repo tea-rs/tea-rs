@@ -1,0 +1,426 @@
+{
+  "formatVersion": 1,
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "records": [
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "profileId": "minimal-assistant"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e50-7af4-8972-0aa7aa000022",
+      "sequence": "0",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.000Z",
+      "type": "session_created"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "message": {
+          "content": [
+            {
+              "text": "Inspect the workspace.",
+              "type": "text"
+            }
+          ],
+          "id": "0195a0b1-5e3d-7bb4-863a-0aa7aa000003",
+          "timestamp": "2026-07-23T09:30:12.124Z",
+          "type": "user"
+        }
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e4a-742a-b57f-0aa7aa000016",
+      "sequence": "1",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.001Z",
+      "type": "message_committed"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "message": {
+          "content": [
+            {
+              "text": "I will write the notes.",
+              "type": "text"
+            },
+            {
+              "arguments": {
+                "content": "done",
+                "path": "/workspace/notes.txt"
+              },
+              "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+              "toolName": "write_text_file",
+              "type": "tool_call"
+            }
+          ],
+          "id": "0195a0b1-5e64-76d6-9a5a-0aa7aa000042",
+          "stopReason": "tool_use",
+          "timestamp": "2026-07-23T09:30:13.000Z",
+          "type": "assistant"
+        }
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e63-7b8c-a5ad-0aa7aa000041",
+      "sequence": "2",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.002Z",
+      "type": "message_committed"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "metadata": {
+        "dev.tea-rs.tool-audit": {
+          "effects": [
+            "fs.write"
+          ],
+          "resources": [
+            {
+              "access": "write",
+              "redactedPresentation": "file:/workspace/notes.txt",
+              "scheme": "file"
+            }
+          ],
+          "source": {
+            "descriptorDigest": "5c2fe6d5aa5a64dc09567ef61a02305036b9c96e3e2ad8fa6c4bd7eaeb234ecf",
+            "kind": "native",
+            "sourceId": "tea-rs.product.native",
+            "trust": "product"
+          },
+          "toolVersion": "1.0.0"
+        }
+      },
+      "payload": {
+        "arguments": {
+          "content": "done",
+          "path": "/workspace/notes.txt"
+        },
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+        "toolName": "write_text_file"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e52-713b-9bfa-0aa7aa000024",
+      "sequence": "3",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.003Z",
+      "type": "tool_call_requested"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "decision": "require_approval",
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e53-7771-82ab-0aa7aa000025",
+      "sequence": "4",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.004Z",
+      "type": "policy_decision_recorded"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+        "expiresAt": "2026-07-23T09:35:13.010Z",
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e4b-712a-9682-0aa7aa000017",
+      "sequence": "5",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.005Z",
+      "type": "approval_requested"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+        "decision": {
+          "type": "allow_session"
+        }
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e54-7c92-b8ca-0aa7aa000026",
+      "sequence": "6",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.006Z",
+      "type": "approval_resolved"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "executionTarget": "native",
+        "idempotency": "non_idempotent",
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e4c-7c9f-82df-0aa7aa000018",
+      "sequence": "7",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.007Z",
+      "type": "tool_execution_started"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "content": [
+          {
+            "text": "wrote notes",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e4d-7f55-bc85-0aa7aa000019",
+      "sequence": "8",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.008Z",
+      "type": "tool_execution_finished"
+    },
+    {
+      "branchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020",
+      "payload": {
+        "message": {
+          "content": [
+            {
+              "text": "wrote notes",
+              "type": "text"
+            }
+          ],
+          "id": "0195a0b1-5e66-7e4d-9af7-0aa7aa000044",
+          "isError": false,
+          "timestamp": "2026-07-23T09:30:14.121Z",
+          "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+          "toolName": "write_text_file",
+          "type": "tool_result"
+        }
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e65-7762-9938-0aa7aa000043",
+      "sequence": "9",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.009Z",
+      "type": "message_committed"
+    },
+    {
+      "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+      "payload": {
+        "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+        "fromRecordId": "0195a0b1-5e65-7762-9938-0aa7aa000043",
+        "sourceBranchId": "0195a0b1-5e4e-728c-bfe1-0aa7aa000020"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e56-7da9-9342-0aa7aa000028",
+      "sequence": "10",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.010Z",
+      "type": "branch_created"
+    },
+    {
+      "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+      "payload": {
+        "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e57-7e12-90c1-0aa7aa000029",
+      "sequence": "11",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.011Z",
+      "type": "active_branch_changed"
+    },
+    {
+      "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+      "payload": {
+        "nextAction": "model_request",
+        "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+        "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e58-778a-a74e-0aa7aa000030",
+      "sequence": "12",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.012Z",
+      "type": "turn_checkpointed"
+    },
+    {
+      "branchId": "0195a0b1-5e4f-7bd5-9760-0aa7aa000021",
+      "payload": {
+        "reason": "provider stream ended before terminal output",
+        "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+        "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008"
+      },
+      "protocolVersion": "1.0",
+      "recordId": "0195a0b1-5e59-7854-a36d-0aa7aa000031",
+      "sequence": "13",
+      "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+      "timestamp": "2026-07-23T09:30:12.013Z",
+      "type": "run_interrupted"
+    }
+  ],
+  "approvalArtifacts": [
+    {
+      "type": "requested",
+      "record_id": "0195a0b1-5e4b-712a-9682-0aa7aa000017",
+      "request": {
+        "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+        "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+        "actorId": "user:alice",
+        "profileId": "minimal-assistant",
+        "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+        "workspaceId": "workspace/main",
+        "environment": {
+          "surface": "test",
+          "target": "native",
+          "metadata": {}
+        },
+        "toolName": "write_text_file",
+        "toolVersion": "1.0.0",
+        "toolSource": {
+          "kind": "native",
+          "sourceId": "tea-rs.product.native",
+          "trust": "product",
+          "descriptorDigest": "5c2fe6d5aa5a64dc09567ef61a02305036b9c96e3e2ad8fa6c4bd7eaeb234ecf"
+        },
+        "effects": [
+          "fs.write"
+        ],
+        "resources": [
+          {
+            "scheme": "file",
+            "locator": "/workspace/notes.txt",
+            "access": "write"
+          }
+        ],
+        "createdAt": "2026-07-23T09:30:12.005Z",
+        "expiresAt": "2026-07-23T09:35:13.010Z",
+        "presentation": {
+          "reason": "workspace mutation requires approval",
+          "arguments": {
+            "path": "/workspace/notes.txt"
+          },
+          "resources": [
+            "file:/workspace/notes.txt"
+          ]
+        }
+      }
+    },
+    {
+      "type": "resolved",
+      "record_id": "0195a0b1-5e54-7c92-b8ca-0aa7aa000026",
+      "resolution": {
+        "request": {
+          "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+          "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+          "actorId": "user:alice",
+          "profileId": "minimal-assistant",
+          "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+          "workspaceId": "workspace/main",
+          "environment": {
+            "surface": "test",
+            "target": "native",
+            "metadata": {}
+          },
+          "toolName": "write_text_file",
+          "toolVersion": "1.0.0",
+          "toolSource": {
+            "kind": "native",
+            "sourceId": "tea-rs.product.native",
+            "trust": "product",
+            "descriptorDigest": "5c2fe6d5aa5a64dc09567ef61a02305036b9c96e3e2ad8fa6c4bd7eaeb234ecf"
+          },
+          "effects": [
+            "fs.write"
+          ],
+          "resources": [
+            {
+              "scheme": "file",
+              "locator": "/workspace/notes.txt",
+              "access": "write"
+            }
+          ],
+          "createdAt": "2026-07-23T09:30:12.005Z",
+          "expiresAt": "2026-07-23T09:35:13.010Z",
+          "presentation": {
+            "reason": "workspace mutation requires approval",
+            "arguments": {
+              "path": "/workspace/notes.txt"
+            },
+            "resources": [
+              "file:/workspace/notes.txt"
+            ]
+          }
+        },
+        "decision": {
+          "type": "allow_session"
+        },
+        "decidedAt": "2026-07-23T09:30:12.006Z",
+        "issuedGrant": {
+          "id": "0195a0b1-5e69-70ac-807e-0aa7aa000047",
+          "actorId": "user:alice",
+          "profileId": "minimal-assistant",
+          "toolName": "write_text_file",
+          "toolVersion": "1.0.0",
+          "toolSource": {
+            "kind": "native",
+            "sourceId": "tea-rs.product.native",
+            "trust": "product",
+            "descriptorDigest": "5c2fe6d5aa5a64dc09567ef61a02305036b9c96e3e2ad8fa6c4bd7eaeb234ecf"
+          },
+          "effects": [
+            "fs.write"
+          ],
+          "resources": [
+            {
+              "scheme": "file",
+              "locatorPrefix": "/workspace/",
+              "access": "write"
+            }
+          ],
+          "scope": {
+            "type": "session_resource",
+            "session_id": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1"
+          },
+          "issuedAt": "2026-07-23T09:30:12.006Z"
+        }
+      }
+    }
+  ],
+  "grantJournal": [
+    {
+      "type": "issued",
+      "approval_record_id": "0195a0b1-5e54-7c92-b8ca-0aa7aa000026",
+      "grant": {
+        "id": "0195a0b1-5e69-70ac-807e-0aa7aa000047",
+        "actorId": "user:alice",
+        "profileId": "minimal-assistant",
+        "toolName": "write_text_file",
+        "toolVersion": "1.0.0",
+        "toolSource": {
+          "kind": "native",
+          "sourceId": "tea-rs.product.native",
+          "trust": "product",
+          "descriptorDigest": "5c2fe6d5aa5a64dc09567ef61a02305036b9c96e3e2ad8fa6c4bd7eaeb234ecf"
+        },
+        "effects": [
+          "fs.write"
+        ],
+        "resources": [
+          {
+            "scheme": "file",
+            "locatorPrefix": "/workspace/",
+            "access": "write"
+          }
+        ],
+        "scope": {
+          "type": "session_resource",
+          "session_id": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1"
+        },
+        "issuedAt": "2026-07-23T09:30:12.006Z"
+      }
+    }
+  ]
+}

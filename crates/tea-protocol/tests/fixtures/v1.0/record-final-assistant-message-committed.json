@@ -1,0 +1,23 @@
+{
+  "protocolVersion": "1.0",
+  "type": "message_committed",
+  "recordId": "0195a0b1-5e67-7d1a-8ed4-0aa7aa000045",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "8",
+  "timestamp": "2026-07-23T09:30:15.000Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "message": {
+      "id": "0195a0b1-5e68-7f3c-819e-0aa7aa000046",
+      "type": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "The workspace inspection is complete."
+        }
+      ],
+      "stopReason": "completed",
+      "timestamp": "2026-07-23T09:30:15.000Z"
+    }
+  }
+}

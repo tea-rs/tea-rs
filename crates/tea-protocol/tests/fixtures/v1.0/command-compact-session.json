@@ -1,0 +1,10 @@
+{
+  "protocolVersion": "1.0",
+  "type": "compact_session",
+  "commandId": "0195a0b1-5e61-72f0-9b91-0aa7aa000039",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "timestamp": "2026-07-23T09:35:00.000Z",
+  "payload": {
+    "instruction": "Preserve tool outcomes and architectural decisions."
+  }
+}

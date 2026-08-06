@@ -1,0 +1,17 @@
+{
+  "protocolVersion": "1.0",
+  "type": "approval_requested",
+  "eventId": "0195a0b1-5e47-78d3-a6f3-0aa7aa000013",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "turnId": "0195a0b1-5e42-7b38-af7c-0aa7aa000008",
+  "sequence": "4",
+  "timestamp": "2026-07-23T09:30:13.010Z",
+  "payload": {
+    "approvalId": "0195a0b1-5e46-7e2a-b230-0aa7aa000012",
+    "toolCallId": "0195a0b1-5e45-75be-8284-0aa7aa000011",
+    "capabilities": ["fs.write"],
+    "resources": ["file:/workspace/notes.txt"],
+    "expiresAt": "2026-07-23T09:35:13.010Z"
+  }
+}

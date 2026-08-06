@@ -1,0 +1,17 @@
+{
+  "protocolVersion": "1.1",
+  "type": "protocol_error",
+  "futureEnvelopeField": { "introducedIn": "1.1" },
+  "error": {
+    "code": "unsupported_command",
+    "message": "command type is not supported",
+    "retry": "never",
+    "correlationId": "0195a0b1-5e3b-7ef0-8ec1-0aa7aa000001",
+    "details": {
+      "dev.tea-rs.protocol": {
+        "supportedProtocol": ">=1.0 <2.0"
+      }
+    },
+    "futureErrorField": "compatible additive field"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "protocolVersion": "1.1",
+  "fixtures": [
+    { "category": "command", "file": "command-prompt.json" },
+    { "category": "event", "file": "event-run-finished.json" },
+    { "category": "record", "file": "record-message-committed.json" },
+    { "category": "error", "file": "error-unsupported-command.json" }
+  ]
+}

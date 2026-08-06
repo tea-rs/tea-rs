@@ -1,0 +1,27 @@
+data: {"type":"response.created","response":{"id":"resp_web_search_test","model":"gpt-4.1"}}
+
+data: {"type":"response.output_item.added","output_index":0,"item":{"id":"ws_tea_search","type":"web_search_call","status":"in_progress","action":null}}
+
+data: {"type":"response.web_search_call.in_progress","output_index":0,"item_id":"ws_tea_search","sequence_number":1}
+
+data: {"type":"response.web_search_call.searching","output_index":0,"item_id":"ws_tea_search","sequence_number":2}
+
+data: {"type":"response.web_search_call.completed","output_index":0,"item_id":"ws_tea_search","sequence_number":3}
+
+data: {"type":"response.output_item.done","output_index":0,"item":{"id":"ws_tea_search","type":"web_search_call","status":"completed","action":{"type":"search","queries":["tea-rs hosted tools"],"sources":[{"type":"url","url":"https://example.com/guide"},{"type":"url","url":"https://docs.example.org/reference"}]}}}
+
+data: {"type":"response.output_item.added","output_index":1,"item":{"id":"msg_web_search_test","type":"message","role":"assistant","status":"in_progress","content":[]}}
+
+data: {"type":"response.output_text.delta","output_index":1,"content_index":0,"delta":"Tea uses "}
+
+data: {"type":"response.output_text.delta","output_index":1,"content_index":0,"delta":"sources."}
+
+data: {"type":"response.output_text.annotation.added","output_index":1,"content_index":0,"annotation_index":0,"item_id":"msg_web_search_test","annotation":{"type":"url_citation","start_index":9,"end_index":16,"url":"https://example.com/guide","title":"Tea guide"}}
+
+data: {"type":"response.output_text.done","output_index":1,"content_index":0,"text":"Tea uses sources."}
+
+data: {"type":"response.output_item.done","output_index":1,"item":{"id":"msg_web_search_test","type":"message","role":"assistant","status":"completed","content":[{"type":"output_text","text":"Tea uses sources.","annotations":[{"type":"url_citation","start_index":9,"end_index":16,"url":"https://example.com/guide","title":"Tea guide"}]}]}}
+
+data: {"type":"response.completed","response":{"id":"resp_web_search_test","model":"gpt-4.1","status":"completed","output":[{"id":"ws_tea_search","type":"web_search_call","status":"completed","action":{"type":"search","queries":["tea-rs hosted tools"],"sources":[{"type":"url","url":"https://example.com/guide"},{"type":"url","url":"https://docs.example.org/reference"}]}},{"id":"msg_web_search_test","type":"message","role":"assistant","status":"completed","content":[{"type":"output_text","text":"Tea uses sources.","annotations":[{"type":"url_citation","start_index":9,"end_index":16,"url":"https://example.com/guide","title":"Tea guide"}]}]}],"usage":{"input_tokens":12,"output_tokens":5,"total_tokens":17}}}
+
+data: [DONE]

@@ -1,0 +1,12 @@
+{
+  "protocolVersion": "1.0",
+  "type": "run_cancelled",
+  "recordId": "0195a0b1-5e57-78ff-80e1-0aa7aa000029",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "7",
+  "timestamp": "2026-07-23T09:30:14.130Z",
+  "correlationId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006",
+  "payload": {
+    "runId": "0195a0b1-5e40-7136-8ae0-0aa7aa000006"
+  }
+}

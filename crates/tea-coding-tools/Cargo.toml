@@ -1,0 +1,53 @@
+[package]
+name = "tea-coding-tools"
+version = "0.1.0"
+description = "Workspace-scoped native coding tool adapters for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "coding", "tools"]
+categories = ["development-tools"]
+
+[lib]
+doctest = false
+
+[dependencies]
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-provider-http = { version = "=0.1.0", path = "../tea-provider-http" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools" }
+async-stream.workspace = true
+brotli.workspace = true
+dom_query.workspace = true
+encoding_rs.workspace = true
+flate2.workspace = true
+futures-util.workspace = true
+globset.workspace = true
+ignore.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+mime.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+similar.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["io-util", "net", "process", "time"] }
+url.workspace = true
+
+[target.'cfg(unix)'.dependencies]
+nix.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "net", "rt"] }
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

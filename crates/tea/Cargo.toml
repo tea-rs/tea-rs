@@ -1,0 +1,46 @@
+[package]
+name = "tea-rs"
+version = "0.1.0"
+description = "Ergonomic embedding facade and product profile wiring for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "runtime"]
+categories = ["asynchronous"]
+
+[lib]
+name = "tea"
+path = "src/lib.rs"
+
+[dependencies]
+tea-context = { version = "=0.1.0", path = "../tea-context" }
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-kernel = { version = "=0.1.0", path = "../tea-kernel" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-policy = { version = "=0.1.0", path = "../tea-policy" }
+tea-profile = { version = "=0.1.0", path = "../tea-profile" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-session = { version = "=0.1.0", path = "../tea-session" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools" }
+futures-core.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["sync"] }
+uuid.workspace = true
+
+[dev-dependencies]
+tea-coding-tools = { version = "=0.1.0", path = "../tea-coding-tools" }
+tea-provider-openai = { version = "=0.1.0", path = "../tea-provider-openai" }
+tea-testkit = { version = "=0.1.0", path = "../tea-testkit" }
+serde_json.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

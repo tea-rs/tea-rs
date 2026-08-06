@@ -1,0 +1,16 @@
+{
+  "protocolVersion": "1.0",
+  "type": "configuration_changed",
+  "recordId": "0195a0b1-5e51-75bd-a2a2-0aa7aa000023",
+  "sessionId": "0195a0b1-5e3a-7d72-a902-c4e85d828bf1",
+  "sequence": "2",
+  "timestamp": "2026-07-23T09:30:12.125Z",
+  "causationId": "0195a0b1-5e3c-70a1-927f-0aa7aa000002",
+  "payload": {
+    "model": {
+      "providerId": "anthropic",
+      "modelId": "anthropic/claude-sonnet"
+    },
+    "profileId": "minimal-assistant"
+  }
+}

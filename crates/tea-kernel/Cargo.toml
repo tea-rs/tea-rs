@@ -1,0 +1,43 @@
+[package]
+name = "tea-kernel"
+version = "0.1.0"
+description = "Headless model-tool agent state machine for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "runtime", "state-machine"]
+categories = ["asynchronous"]
+
+[lib]
+doctest = false
+
+[dependencies]
+tea-context = { version = "=0.1.0", path = "../tea-context" }
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-policy = { version = "=0.1.0", path = "../tea-policy" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-session = { version = "=0.1.0", path = "../tea-session" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools" }
+chrono.workspace = true
+futures-core.workspace = true
+futures-util.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["time"] }
+uuid.workspace = true
+
+[dev-dependencies]
+tea-testkit = { version = "=0.1.0", path = "../tea-testkit" }
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

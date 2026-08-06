@@ -1,0 +1,32 @@
+[package]
+name = "tea-testkit"
+version = "0.1.0"
+description = "Deterministic test doubles for tea-rs"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+autotests = false
+readme = "README.md"
+keywords = ["agent", "llm", "testing"]
+categories = ["development-tools::testing"]
+
+[dependencies]
+tea-control = { version = "=0.1.0", path = "../tea-control" }
+tea-model = { version = "=0.1.0", path = "../tea-model" }
+tea-protocol = { version = "=0.1.0", path = "../tea-protocol" }
+tea-tools = { version = "=0.1.0", path = "../tea-tools" }
+futures-util.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"

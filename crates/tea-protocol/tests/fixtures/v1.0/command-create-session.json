@@ -1,0 +1,14 @@
+{
+  "protocolVersion": "1.0",
+  "type": "create_session",
+  "commandId": "0195a0b1-5e3b-7ef0-8ec1-0aa7aa000001",
+  "timestamp": "2026-07-23T09:30:12.123Z",
+  "payload": {
+    "profileId": "minimal-assistant",
+    "metadata": {
+      "com.example.surface": {
+        "surface": "desktop"
+      }
+    }
+  }
+}
