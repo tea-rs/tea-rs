@@ -52,6 +52,41 @@ checksum() {
   fi
 }
 
+verify_checksum() {
+  archive_name=$1
+  if command -v sha256sum >/dev/null 2>&1; then
+    (cd "$package_dir" && sha256sum -c "$archive_name.sha256")
+  else
+    (cd "$package_dir" && shasum -a 256 -c "$archive_name.sha256")
+  fi
+}
+
+verify_bundle() {
+  profile=$1
+  bundle_name=$2
+  archive_name=$3
+  verification_dir="$temporary_dir/verify-$profile"
+  verified_root="$verification_dir/$bundle_name"
+
+  verify_checksum "$archive_name"
+  mkdir -p "$verification_dir"
+  tar -xzf "$package_dir/$archive_name" -C "$verification_dir"
+
+  entry_count=$(find "$verified_root" -mindepth 1 -maxdepth 1 | wc -l | tr -d '[:space:]')
+  if [ "$entry_count" -ne 3 ] \
+    || [ ! -x "$verified_root/tea" ] \
+    || [ ! -f "$verified_root/LICENSE" ] \
+    || [ ! -f "$verified_root/README.md" ]; then
+    echo "CLI package has an invalid layout: $archive_name" >&2
+    exit 1
+  fi
+
+  if [ "$host_target" = "$package_target" ]; then
+    "$verified_root/tea" --version >/dev/null
+  fi
+  echo "CLI package verification: PASS ($archive_name)"
+}
+
 build_bundle() {
   profile=$1
   cargo_profile=$profile
@@ -79,6 +114,7 @@ build_bundle() {
   archive_name="$bundle_name.tar.gz"
   tar -czf "$package_dir/$archive_name" -C "$temporary_dir" "$bundle_name"
   checksum "$archive_name"
+  verify_bundle "$profile" "$bundle_name" "$archive_name"
   echo "CLI package: $package_dir/$archive_name"
   echo "CLI checksum: $package_dir/$archive_name.sha256"
 }

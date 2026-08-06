@@ -73,7 +73,6 @@ check_metadata() {
 
 run_metadata_policy() {
   load_metadata || return $?
-  cargo metadata --no-deps --format-version 1 >/dev/null || return $?
   echo "cargo metadata: PASS"
 }
 

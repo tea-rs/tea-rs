@@ -30,7 +30,7 @@ for suite in crates/*/tests/integration.rs; do
     fi
   fi
   sed -n 's/^#[[]path = "\([^"]*\)\.rs"[]]$/\1/p' "$suite" \
-    | sed '/\/mod$/d' | sort >"$actual"
+    | sed '/\//d' | sort >"$actual"
 
   if ! diff -u "$expected" "$actual"; then
     echo "$crate_name integration harness does not cover every test source" >&2
