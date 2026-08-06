@@ -540,9 +540,13 @@ impl InteractiveApp<'_> {
                 event = self.events.recv() => {
                     match event {
                         Some(event) => {
-                            let run_finished = matches!(event.event(), AgentEvent::RunFinished { .. });
+                            let owned_command_finished = matches!(
+                                event.event(),
+                                AgentEvent::ApprovalRequested { .. }
+                                    | AgentEvent::RunFinished { .. }
+                            );
                             self.apply(Action::Event(Box::new(event))).await?;
-                            if run_finished {
+                            if owned_command_finished {
                                 if self.owned_runs.contains(&session_id) {
                                     let outcome = self.service.wait(session_id).await;
                                     self.finish_owned_run(session_id, outcome).await?;
