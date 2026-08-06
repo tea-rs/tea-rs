@@ -69,9 +69,7 @@ not provide source-code, API, or protocol compatibility with either project.
 
 ## Documentation
 
-User documentation and integration guides are available on the [Tea
-documentation site](https://tea-hq.github.io/tea-docs/). The source is
-maintained in the [Tea documentation repository](https://github.com/tea-hq/tea-docs).
+User documentation and integration guides are available in the [Docs](https://tea-hq.github.io/tea-docs/).
 
 Crate API documentation is available on [docs.rs](https://docs.rs/tea-rs).
 

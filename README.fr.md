@@ -70,9 +70,8 @@ compatibilité de code source, d'API ou de protocole avec ces projets.
 
 ## Documentation
 
-La documentation utilisateur et les guides d'intégration sont disponibles sur le
-[site de documentation Tea](https://tea-hq.github.io/tea-docs/). Les sources sont
-maintenues dans le [dépôt de documentation Tea](https://github.com/tea-hq/tea-docs).
+La documentation utilisateur et les guides d'intégration sont disponibles dans la
+[Documentation](https://tea-hq.github.io/tea-docs/).
 
 La documentation des API des crates est disponible sur [docs.rs](https://docs.rs/tea-rs).
 

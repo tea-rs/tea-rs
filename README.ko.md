@@ -61,7 +61,7 @@ Tea는 독립적인 Rust 구현입니다. 오픈 소스 [Pi Agent](https://githu
 
 ## 문서
 
-사용자 문서와 통합 가이드는 [Tea 문서 사이트](https://tea-hq.github.io/tea-docs/)에서 확인할 수 있으며, 소스는 [Tea documentation repository](https://github.com/tea-hq/tea-docs)에서 관리합니다.
+사용자 문서와 통합 가이드는 [문서](https://tea-hq.github.io/tea-docs/)에서 확인할 수 있습니다.
 
 crate API 문서는 [docs.rs](https://docs.rs/tea-rs)에서 확인할 수 있습니다.
 
