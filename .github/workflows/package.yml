@@ -1,0 +1,73 @@
+name: Package
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+    paths:
+      - ".cargo/**"
+      - ".github/actions/setup-rust/**"
+      - ".github/workflows/package.yml"
+      - "crates/*/build.rs"
+      - "crates/*/Cargo.toml"
+      - "crates/*/src/**"
+      - "crates/tea-cli/README.md"
+      - "scripts/package-cli.sh"
+      - "Cargo.lock"
+      - "Cargo.toml"
+      - "LICENSE"
+      - "rust-toolchain.toml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: package-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+
+jobs:
+  package-cli-linux:
+    runs-on: ubuntu-24.04
+    env:
+      TEA_PACKAGE_PROFILE: release
+      TEA_PACKAGE_TARGET: x86_64-unknown-linux-gnu
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: |
+          test "$(rustc -vV | sed -n 's/^host: //p')" = "$TEA_PACKAGE_TARGET"
+      - run: ./scripts/package-cli.sh
+      - if: ${{ github.event_name != 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: tea-cli-x86_64-unknown-linux-gnu
+          path: |
+            target/dist/*.tar.gz
+            target/dist/*.sha256
+          retention-days: 14
+
+  package-cli-macos:
+    if: ${{ github.event_name != 'pull_request' }}
+    runs-on: macos-14
+    env:
+      TEA_PACKAGE_PROFILE: release
+      TEA_PACKAGE_TARGET: aarch64-apple-darwin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-rust
+      - run: rustup target add "$TEA_PACKAGE_TARGET" --toolchain 1.97.1
+      - run: ./scripts/package-cli.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tea-cli-aarch64-apple-darwin
+          path: |
+            target/dist/*.tar.gz
+            target/dist/*.sha256
+          retention-days: 14
