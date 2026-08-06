@@ -255,6 +255,8 @@ fn revalidation_detects_existing_target_replacement_and_prospective_target_appea
     let existing_mutation = capability.resolve_mutation("existing.txt").unwrap();
     let prospective = capability.resolve_mutation("new.txt").unwrap();
 
+    #[cfg(unix)]
+    let _existing_handle = fs::File::open(root.join("existing.txt")).unwrap();
     fs::remove_file(root.join("existing.txt")).unwrap();
     fs::write(root.join("existing.txt"), b"replacement").unwrap();
     assert_code(
@@ -314,6 +316,7 @@ fn dangling_symlinks_and_workspace_root_replacement_fail_closed() {
     );
 
     fs::remove_file(root.join("dangling")).unwrap();
+    let _root_handle = fs::File::open(&root).unwrap();
     fs::remove_dir(&root).unwrap();
     fs::create_dir(&root).unwrap();
     assert_code(
