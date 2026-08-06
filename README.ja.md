@@ -63,7 +63,7 @@ Tea は独立した Rust 実装です。オープンソースの [Pi Agent](http
 
 ## ドキュメント
 
-ユーザードキュメントと統合ガイドは [Tea documentation repository](https://github.com/tea-hq/tea-docs) で管理しています。
+ユーザードキュメントと統合ガイドは [Tea documentation site](https://tea-hq.github.io/tea-docs/) で確認できます。ソースは [Tea documentation repository](https://github.com/tea-hq/tea-docs) で管理しています。
 
 crate API ドキュメントは [docs.rs](https://docs.rs/tea-rs) で確認できます。
 

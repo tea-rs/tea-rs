@@ -69,7 +69,7 @@ auf Ebene von Quellcode, API oder Protokoll mit diesen Projekten.
 
 ## Dokumentation
 
-Benutzerdokumentation und Integrationsanleitungen werden im [Tea-Dokumentations-Repository](https://github.com/tea-hq/tea-docs) gepflegt.
+Benutzerdokumentation und Integrationsanleitungen sind auf der [Tea-Dokumentationsseite](https://tea-hq.github.io/tea-docs/) verfügbar. Die Quellen werden im [Tea-Dokumentations-Repository](https://github.com/tea-hq/tea-docs) gepflegt.
 
 Die API-Dokumentation der Crates ist auf [docs.rs](https://docs.rs/tea-rs) verfügbar.
 

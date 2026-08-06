@@ -62,7 +62,7 @@ de código fuente, API ni protocolo con ninguno de esos proyectos.
 
 ## Documentación
 
-La documentación de usuario y las guías de integración se mantienen en el [repositorio de documentación de Tea](https://github.com/tea-hq/tea-docs).
+La documentación de usuario y las guías de integración están disponibles en el [sitio de documentación de Tea](https://tea-hq.github.io/tea-docs/). El código fuente se mantiene en el [repositorio de documentación de Tea](https://github.com/tea-hq/tea-docs).
 
 La documentación de la API de los crates está disponible en [docs.rs](https://docs.rs/tea-rs).
 

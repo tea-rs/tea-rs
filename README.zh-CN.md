@@ -61,7 +61,7 @@ Tea 不提供与上述项目的源代码、API 或协议兼容性。
 
 ## 文档
 
-用户文档和集成指南维护在 [Tea 文档仓库](https://github.com/tea-hq/tea-docs)。
+用户文档和集成指南可在 [Tea 文档网站](https://tea-hq.github.io/tea-docs/) 查看，文档源文件维护在 [Tea 文档仓库](https://github.com/tea-hq/tea-docs)。
 
 crate API 文档可在 [docs.rs](https://docs.rs/tea-rs) 查看。
 
